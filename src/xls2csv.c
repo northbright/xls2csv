@@ -10,9 +10,9 @@
 
 char *xls2csv(char *pstrXLSFile, int nSheetId) {
     WORD i, j = 0;
-    xlsWorkBook *pWB;
-    xlsWorkSheet *pWS;
-    struct st_row_data *row;
+    xlsWorkBook *pWB = NULL;
+    xlsWorkSheet *pWS = NULL;
+    struct st_row_data *row = NULL;
     char *buf = NULL;
 
     pWB = xls_open(pstrXLSFile, "utf-8");
