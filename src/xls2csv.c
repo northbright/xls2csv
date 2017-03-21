@@ -8,6 +8,21 @@
 #include <libxls/xls.h>
 #include "appendstr.h"
 
+// xls2csv reads XLS files and convert XLS data to CSV string.
+//     Params:
+//       pstrXLSFile: file name of XLS.
+//       nSheetId: index of sheets(zero-based).
+//     Return:
+//       pointer to a memory block contains converted CSV string if succeeded or NULL if failed.
+//       It should call free() to free the memory block after use.
+//     Example:
+//       char * buf = xls2csv("1.csv", 2);
+//       if (buf != NULL) {
+//           // Do something on the buffer.
+//           ......
+//           free(buf);
+//           buf = NUL;
+//       }
 char *xls2csv(char *pstrXLSFile, int nSheetId) {
     WORD i, j = 0;
     xlsWorkBook *pWB = NULL;
