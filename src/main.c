@@ -6,7 +6,7 @@
 
 #include "xls2csv.h"
 
-const char *usage = "Usage: xls2csv -x ";
+const char *usage = "Usage: xls2csv [-x XLS file] [-c CSV file] [-s sheet ID]";
 
 int main(int argc, char *argv[]) {
     int oc;
@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
     char *opt_arg;
     char *xls_file = NULL;
     char *csv_file = NULL;
-    int nSheetId = -1;
+    int nSheetId = 0;
 
     opterr = 0;
 
