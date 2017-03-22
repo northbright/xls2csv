@@ -21,13 +21,11 @@ int main(int argc, char *argv[]) {
     while((oc = getopt(argc, argv, ":x:c:s:")) != -1) {
         switch(oc) {
 	    case 'x':
-		xls_file = (char*)calloc(strlen(optarg) + 1, sizeof(char));
-                strcpy(xls_file, optarg);
+                xls_file = optarg;
 		break;
  
             case 'c':
-                csv_file = (char*)calloc(strlen(optarg) + 1, sizeof(char));
-                strcpy(csv_file, optarg);
+                csv_file = optarg;
                 break;
 
             case 's':
@@ -51,8 +49,5 @@ int main(int argc, char *argv[]) {
     printf("xls_file: %s, csv_file: %s, nSheetId: %d\n", xls_file, csv_file, nSheetId);
 
 end:
-    if (xls_file != NULL) {
-        free(xls_file);
-        xls_file = NULL;
-    }
+    return;
 }
