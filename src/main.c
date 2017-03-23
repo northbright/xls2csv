@@ -31,10 +31,16 @@ int main(int argc, char *argv[]) {
     //     "x:" means '-x' option should have argument.
     //     "x::" means '-x' option may have argument or not(optional).
     //           In this case, there should NOT be spaces between option and argument. Ex: "-xArg".
-    //   if optstring starts with ":" will make getopt():
+    //   if optstring starts with ":", it'll make getopt():
     //     1. not output error messages
     //     2. return '?' if there's invalid option.
     //     3. return ':' if argument if missing for the option.
+    //
+    // global variables used by getopt():
+    // 1. opterr - set to 0 to disable output error messages.
+    // 2. optarg - after each call of getopt() it's the argument of specified option(pointer to argv[].
+    // 3. optind - after getopt() return -1, argv[] will be re-sorted, non-option arguments will be put to the end of argv[]. optind is the index of first non-option argument.
+    //    We can use optind to find all non-option arguments.
     while((oc = getopt(argc, argv, ":s:o:")) != -1) {
         switch(oc) {
             case 's':
