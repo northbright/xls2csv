@@ -1,0 +1,12 @@
+language: c
+
+compiler: gcc
+
+before_install:
+  - ./install-libxls.sh
+
+install:
+
+script:
+  - cd $TRAVIS_BUILD_DIR/libxls-0.2.0/src
+  - LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/libxls-0.2.0/src gcc -o xls2csv *.c
