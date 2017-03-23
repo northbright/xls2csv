@@ -6,7 +6,7 @@ xls2csv is a program which converts XLS files to CSV files. It's based on `xls2c
 
 #### Features
 * Specify sheet by given sheet ID.
-* Keep data if rowspan > 2(original xls2csv.c will stop and return).
+* Keep data if rowspan > 1(original xls2csv.c will stop and return).
 
 #### Build
 * Run `./build.sh` to get `./src/xls2csv`.
