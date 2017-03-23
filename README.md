@@ -5,7 +5,7 @@
 xls2csv is a program which converts XLS files to CSV files. It's based on `xls2csv.c` of [libxls](http://libxls.sourceforge.net/).
 
 #### Features
-* Specifiy sheet by given sheet ID.
+* Specify sheet by given sheet ID.
 * Keep data if rowspan > 2(original xls2csv.c will stop and return).
 
 #### Usage
