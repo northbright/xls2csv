@@ -20,9 +20,21 @@ int main(int argc, char *argv[]) {
     int nRet = EXIT_FAILURE;
     char *buf = NULL;
     FILE *f = NULL;
+
+    // Disable getopt() output error message.
     opterr = 0;
     
     // Use getopt() to parse args.
+    // int getopt(int argc, char * const argv[], const char *optstring);
+    // params:
+    //   optstring:
+    //     "x:" means '-x' option should have argument.
+    //     "x::" means '-x' option may have argument or not(optional).
+    //           In this case, there should NOT be spaces between option and argument. Ex: "-xArg".
+    //   if optstring starts with ":" will make getopt():
+    //     1. not output error messages
+    //     2. return '?' if there's invalid option.
+    //     3. return ':' if argument if missing for the option.
     while((oc = getopt(argc, argv, ":s:o:")) != -1) {
         switch(oc) {
             case 's':
