@@ -3,9 +3,8 @@ language: c
 compiler: gcc
 
 before_install:
-  - ./install-libxls.sh
 
 install:
 
 script:
-  - LD_LIBRARY_PATH=$TRAVIS_BUILD_DIR/libxls-0.2.0/src ./src/build.sh
+  - ./build.sh
