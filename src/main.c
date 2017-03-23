@@ -6,8 +6,8 @@
 
 #include "xls2csv.h"
 
-const char *usage = "Usage: xls2csv [XLS file] [-s sheet ID(0-based)] [-o CSV File]";
-const char *example = "Example: xls2csv my.xls -s 2 -o my.csv";
+const char *usage = "Usage:\nxls2csv [XLS file] [-s sheet ID] [-o CSV File]\n-s sheet ID. It's 0-based. Default is 0 if no sheet id specifed.\n-o CSV file to output. If no CSV file is specified, it'll output CSV string to stdout.";
+const char *example = "Example:\nxls2csv my.xls\nxls2csv my.xls -s 2 -o my.csv";
 
 int main(int argc, char *argv[]) {
     int oc;
