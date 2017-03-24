@@ -55,15 +55,18 @@ char *xls2csv(char *pstrXLSFile, int nSheetId) {
 	row = &(pWS->rows.row[i]);
 
 	// Process cells
-        for (j = 0; j <= pWS->rows.lastcol; j++) {
+        for (j = 0; j <= pWS->rows.lastcol - 1; j++) {
 	    // Display the value of the cell (either numeric or string)
 	    if (row->cells.cell[j].id == 0x27e || row->cells.cell[j].id==0x0BD || row->cells.cell[j].id==0x203) {
 	        buf = appendStr(buf, "%.15g", row->cells.cell[j].d);
 	    } else if (row->cells.cell[j].str != NULL) {
 		buf = appendStr(buf, row->cells.cell[j].str);
+	    } else {
+		// Skip if cell value is not number or string.
+		continue;
 	    }
 
-	    if (j != pWS->rows.lastcol) {
+	    if (j != pWS->rows.lastcol - 1) {
                 buf = appendStr(buf, ",");
 	    }
 	}
