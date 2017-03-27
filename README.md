@@ -12,7 +12,23 @@ xls2csv is a program which converts XLS files to CSV files. It's based on `xls2c
   * Keep data if rowspan > 1(original xls2csv.c will stop and return).
 
 #### Build
-* Run `./build.sh` to get `./src/xls2csv`.
+* xls2csv requires [libxls](http://libxls.sourceforge.net/) to be installed.
+
+        wget http://downloads.sourceforge.net/libxls/libxls-0.2.0.tar.gz
+        tar -xzvf libxls-0.2.0.tar.gz
+        cd libxls-0.2.0
+        ./configure
+        make
+        sudo make install
+
+* Build xls2csv
+
+        git clone https://github.com/northbright/xls2csv.git
+        cd xls2csv/src
+        gcc -o xls2csv *.c -I/usr/local/libxls/include -L/usr/local/libxls/lib -lxlsreader
+
+* Auto-Build Script
+    * Run `./build.sh` to get `./src/xls2csv`.
 
 #### Usage
     xls2csv [XLS file] [-s sheet ID(0-based)] [-o CSV File]
