@@ -1,5 +1,3 @@
-sudo: required
-
 language: c
 
 compiler: gcc
@@ -7,6 +5,16 @@ compiler: gcc
 before_install:
 
 install:
+  - wget http://downloads.sourceforge.net/libxls/libxls-0.2.0.tar.gz
+  - tar -xzvf libxls-0.2.0.tar.gz
+  - cd libxls-0.2.0
+  - ./configure --prefix=$HOME
+  - make
+  - make install
+
+before_script:
+  - export LD_LIBRARY_PATH="$HOME/lib":$LD_LIBRARY_PATH
 
 script:
-  - ./build.sh
+  - gcc -o xls2csv *.c -I$HOME/include -L/$HOME/lib -lxlsreader
+  - ./xls2csv
