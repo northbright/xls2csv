@@ -27,9 +27,6 @@ xls2csv is a program which converts XLS files to CSV files. It's based on `xls2c
         cd xls2csv/src
         gcc -o xls2csv *.c -I/usr/local/libxls/include -L/usr/local/libxls/lib -lxlsreader
 
-* Auto-Build Script
-    * Run `./build.sh` to get `./src/xls2csv`.
-
 #### Usage
     xls2csv [XLS file] [-s sheet ID(0-based)] [-o CSV File]
     
