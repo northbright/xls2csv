@@ -18,4 +18,3 @@ before_script:
 script:
   - cd ../src
   - gcc -o xls2csv *.c -I$HOME/include -L/$HOME/lib -lxlsreader
-  - ./xls2csv
