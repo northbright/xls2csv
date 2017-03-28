@@ -16,5 +16,6 @@ before_script:
   - export LD_LIBRARY_PATH="$HOME/lib":$LD_LIBRARY_PATH
 
 script:
+  - cd ./src
   - gcc -o xls2csv *.c -I$HOME/include -L/$HOME/lib -lxlsreader
   - ./xls2csv
