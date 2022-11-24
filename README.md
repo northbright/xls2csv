@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/northbright/xls2csv.svg?branch=master)](https://travis-ci.org/northbright/xls2csv)
 
-xls2csv is a program which converts XLS files to CSV files. It's based on `xls2csv.c` of [libxls](http://libxls.sourceforge.net/).
+xls2csv is a program which converts XLS files to CSV files. It's based on `xls2csv.c` of [libxls](https://github.com/libxls/libxls/).
 
 #### Features
 * Specify sheet by given sheet ID.
@@ -12,7 +12,7 @@ xls2csv is a program which converts XLS files to CSV files. It's based on `xls2c
   * Keep data if rowspan > 1(original xls2csv.c will stop and return).
 
 #### Build
-* xls2csv requires [libxls](http://libxls.sourceforge.net/) to be installed.
+* xls2csv requires [libxls](https://github.com/libxls/libxls/) to be installed.
   * Install libxls
         
           wget http://downloads.sourceforge.net/libxls/libxls-0.2.0.tar.gz
@@ -55,5 +55,5 @@ xls2csv is a program which converts XLS files to CSV files. It's based on `xls2c
 * [MIT License](./LICENSE)
 
 #### Thanks
-* Thanks powerful [libxls](http://libxls.sourceforge.net/) to give it a chance that we can still operate on XLS file.
+* Thanks powerful [libxls](https://github.com/libxls/libxls/) to give it a chance that we can still operate on XLS file.
 
