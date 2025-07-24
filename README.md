@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/northbright/xls2csv.svg?branch=master)](https://travis-ci.org/northbright/xls2csv)
 
+Update: This program is broken and just use the [xls2csv.c](https://github.com/libxls/libxls/blob/dev/src/xls2csv.c) comes from latest [libxls](https://github.com/libxls/libxls/).
+
 xls2csv is a program which converts XLS files to CSV files. It's based on `xls2csv.c` of [libxls](https://github.com/libxls/libxls/).
 
 #### Features
