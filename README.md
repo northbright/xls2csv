@@ -15,9 +15,9 @@ xls2csv is a program which converts XLS files to CSV files. It's based on `xls2c
 * xls2csv requires [libxls](https://github.com/libxls/libxls/) to be installed.
   * Install libxls
         
-          wget https://github.com/libxls/libxls/releases/download/v1.6.2/libxls-1.6.2.tar.gz
-          tar -xzvf libxls-1.6.2.tar.gz
-          cd libxls-1.6.2
+          wget http://downloads.sourceforge.net/libxls/libxls-0.2.0.tar.gz
+          tar -xzvf libxls-0.2.0.tar.gz
+          cd libxls-0.2.0
           ./configure
           make
           sudo make install
